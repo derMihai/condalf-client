@@ -1,0 +1,25 @@
+# enable all ConDaLF modules by default
+CONDALF_USE_PUBLISHER   ?= 1
+CONDALF_USE_LTB         ?= 1
+CONDALF_USE_RDLOG       ?= 1
+
+#ifneq (,$(filter timex,$(USEMODULE)))
+  USEMODULE += timex
+#endif
+
+#ifneq (,$(filter vfs,$(USEMODULE)))
+  USEMODULE += vfs
+#endif
+
+#ifneq (,$(filter qcbor,$(USEPKG)))
+  USEPKG += qcbor
+#endif
+
+ifeq ($(CONDALF_USE_PUBLISHER), 1)
+USEMODULE += gnrc_ipv6_default
+USEMODULE += gcoap
+endif
+
+CFLAGS += -DCONDALF_USE_PUBLISHER=$(CONDALF_USE_PUBLISHER)
+CFLAGS += -DCONDALF_USE_LTB=$(CONDALF_USE_LTB)
+CFLAGS += -DCONDALF_USE_RDLOG=$(CONDALF_USE_RDLOG)

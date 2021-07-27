@@ -1,0 +1,9 @@
+framework/bin
+framework/.project
+framework/.cproject
+framework/.settings
+framework/usecase_private.include
+*.o
+*.d
+*_local.sh
+.vscode
