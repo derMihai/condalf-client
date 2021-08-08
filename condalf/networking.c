@@ -127,7 +127,7 @@ static ssize_t _init_remote(sock_udp_ep_t *remote, char *addr_str, uint16_t port
     return 1;
 }
 
-/* Writes and sends next block for /sha256 request. */
+/* Writes and sends next block for COAP resource request. */
 static int _do_block_put(network_privdata_t* privdata)
 {
     gcoap_req_init(&privdata->pdu, (uint8_t *)privdata->pdu.hdr, CONFIG_GCOAP_PDU_BUF_SIZE,
@@ -149,7 +149,7 @@ static int _do_block_put(network_privdata_t* privdata)
 
 
 
-/* Response handler for client request to /sha256. */
+/* Response handler for client request to COAP resource. */
 static void _resp_handler(const gcoap_request_memo_t *memo, coap_pkt_t* pdu,
                           const sock_udp_ep_t *remote)
 {
