@@ -1,7 +1,7 @@
 ## Constrained Data Logging Framework (ConDaLF) - client library
 Data logging tools based on RIOT OS
 
-This is the client side of the CoDaLF framework, a C library that provides basic modules for data point serialization, long time buffering and sending, aimed at devices with constrained resources. These modules can be statically enabled/disabled, yet are run-time configurable. Packaged as an external module for the [RIOT-OS](https://www.riot-os.org/), the library can be used on almost every platform that is supported by the OS. The user can furthermore take advantage of the whole RIOT ecosystem for the rest of the implementation. The straight-forward way to use it is complementary to the [ConDaLF backend](link-to-condalf-backed-repo), however, the standard protocols for packaging and sending data used by the framework ensure complete decoupling from the backend choice.
+This is the client side of the CoDaLF framework, a C library that provides basic modules for data point serialization, long time buffering and sending, aimed at devices with constrained resources. These modules can be statically enabled/disabled, yet are run-time configurable. Packaged as an external module for the [RIOT-OS](https://www.riot-os.org/), the library can be used on almost every platform that is supported by the OS. The user can furthermore take advantage of the whole RIOT ecosystem for the rest of the implementation. The straight-forward way to use it is complementary to the [ConDaLF backend](https://github.com/renebckr/ConDaLF-Backend), however, the standard protocols for packaging and sending data used by the framework ensure complete decoupling from the backend choice.
 
 ## Building and integrating ConDaLF in a project
 
